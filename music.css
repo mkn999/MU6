@@ -10,11 +10,36 @@
     background-color: rgb(165, 227, 248);
     display: flex;
     align-items: center;
+    justify-content: center;
 
 }
 .musicContainer{
+    display: flex;
+    flex-direction: column;
     justify-self: center;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     width:500px;
     height: 600px;
+}
+
+.musicImg img{
+    width: 500px;
+    height: 500px;
+}
+
+.controlContainer{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controlContainer button{
+    width: 100px;    
+    height: 50px;
+    margin-top: 40px;
+    border: 1px solid black;
+    background-color: white;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
 }
