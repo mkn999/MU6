@@ -10,17 +10,30 @@
     <div class="mainContainer">
         <div class="musicContainer">
         <div class="musicImg"><img src="H:\phofor\week4.jpg"></div>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
         <div class="controlContainer">
-            <audio controls>
-                <source src="path_to_audio_file.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
+            <audio id="audioPlayer" src="loveshot.mp3">
             </audio>
-            <button type="button">Pre</button>
-            <button type="button">Play/Pause</button>
-            <button type="button">Pos</button>
+            <button type="button" id="play">play</button>
+            <button type="button" id="pause">pause</button>
         </div>
         </div>
     </div>
     </div>
 </body>
+<script>
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playButton = document.getElementById('play');
+    const pauseButton = document.getElementById('pause');
+    const progressBar = document.getElementById('progress'); 
+
+    playButton.addEventListener('click',function(){
+        audioPlayer.play();
+    });
+    pauseButton.addEventListener('click',function(){
+        audioPlayer.pause();
+    });
+</script>
 </html>
